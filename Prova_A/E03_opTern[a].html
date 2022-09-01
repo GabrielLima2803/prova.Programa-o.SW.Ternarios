@@ -15,10 +15,19 @@
     //Calcule os pontos e apresente o nível de complexidade da prova de planilhas.
 
     //ENTRADA
-
+    const operacaoMat = parseInt(prompt("Infome quantas operações matematicas foram usadas"));
+    const se = parseInt(prompt("Informe quantas SE foram usadas"));
+    const procv = parseInt(prompt("Infome quantas procv foram usadas"));
+    
 
     //PROCESSAMENTO
+    const operacaoMatPontos = operacaoMat * 1.5;
+    const sePontos = se * 4;
+    const procvPontos = procv * 7;
+    const pontosTotal = operacaoMatPontos + sePontos + procvPontos;
 
+    (pontosTotal <= 20) ? document.write(`Iniciante, a quantidade de pontos e de ${pontosTotal}`)
+     :document.write(`INTERMEDIARIO, a quantidade de pontos no total e de ${pontosTotal}`)
 
     //SAÍDA
 

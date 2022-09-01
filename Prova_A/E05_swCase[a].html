@@ -10,11 +10,26 @@
     //Calcule e apresente o preço final do celular de acordo com a forma de Pagamento.
 
     //ENTRADA
-
+    const precoCelular = Number(prompt("Informe o valor do seu celular"));
+    const formaDePagamento = prompt("Informe a forma de pagamento P= Pix | D=dinheiro | B=boleto").toUpperCase();
+    let precoFinal = 0;
 
     //PROCESSAMENTO
-
+    switch (formaDePagamento) {
+        case "P":
+            precoFinal = precoCelular - (precoCelular * 7/100);
+            break;
+        case "D":
+            precoFinal = precoCelular - (precoCelular * 5/100);
+            break;
+        case "B":
+            precoFinal = precoCelular - (precoCelular * 3/100);
+        default:
+            document.write(`Valor Inválido`)
+            break;
+    }
 
     //SAÍDA
+    document.write(`O valor final do celular será de ${(precoFinal).toFixed(2)}, de acordo com sua forma de pagamento`)
 
 </script>

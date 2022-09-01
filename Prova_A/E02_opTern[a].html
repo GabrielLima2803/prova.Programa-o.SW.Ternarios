@@ -10,11 +10,21 @@
     //Apresente a situação final do aluno.
 
     //ENTRADA
+    const nota1 = Number(prompt("Informe a sua nota do 1 trimestre em programação (0-10)"));
+    const nota2 = Number(prompt("Informe a sua nota do 2 trimestre em programação (0-10)"));
+    const nota3 = Number(prompt("Informe a sua nota do 3 trimestre em programação (0-10)"));
+    let mensagem;
 
+    const media = (nota1 + nota2 + nota3) / 3;
 
     //PROCESSAMENTO
-
+    (media <= 4) ? mensagem = "Você está REPROVADO"
+    :(media < 6) ? mensagem = "Você está em EXAME"
+    :(media < 10) ? mensagem = "Você está APROVADO"
+    : (media === 10) ? mensagem = "MITO APENAS"
+    : mensagem = "INVALIDO";
 
     //SAÍDA
+    document.write(`Sua situação e de ${mensagem}`);
 
 </script>

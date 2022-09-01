@@ -12,10 +12,23 @@
     //DICA: Use HA para Hatch, SE para Sedan, SU para SUV.
 
     //ENTRADA
-
+    const categoriaCarro = prompt("Opções de carro Hathc = HA | Sedan = SE | SUV = SUV.").toUpperCase();
 
     //PROCESSAMENTO
-
+    switch (categoriaCarro) {
+        case "HA":
+            alert(`Carro para menores de 30`);
+            break;
+        case "SE":
+            alert(`Carro para maiores de 70`);
+            break;
+        case "SUV":
+            alert(`Carro para família`);
+            break;
+        default:
+            alert(`Categoria de carro Inválida`);
+            break;
+    }
 
     //SAÍDA
 

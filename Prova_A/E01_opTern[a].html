@@ -11,11 +11,19 @@
     //Apresente o valor final do computador e o valor de cada parcela.
 
     //ENTRADA
-
+    const valorDoComputador = Number(prompt("Informe o valor do seu computador"));
+    const parcelas = parseInt(prompt("Quantas parcelas você deseja finaciar"));
+    let desconto = 0;
+    let valorParcela = 0 ;
 
     //PROCESSAMENTO
+    (parcelas === 1) ? desconto = valorDoComputador - (valorDoComputador* 5/100)
+    :(parcelas <= 6) ? desconto = valorDoComputador + (valorDoComputador* 3/100)
+    : (parcelas <= 12) ? desconto = valorDoComputador + (valorDoComputador* 8/100)
+    : desconto = valorDoComputador + (valorDoComputador* 12/100);
 
+    valorParcela = desconto / parcelas
 
     //SAÍDA
-
+    document.write(`O valor final sera de ${(desconto).toFixed(2)}, e o valor de cada parcelas sera de ${(valorParcela).toFixed(2)}`);
 </script>
